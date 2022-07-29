@@ -1,4 +1,5 @@
 describe('Login', () => {
+    const loginRegister = '#customernav a'
     const loginField = '#loginFrm_loginname';
     const passwordField = '#loginFrm_password';
     const loginButton = '[title="Login"]';
@@ -15,7 +16,7 @@ describe('Login', () => {
 
     it('should login with valid credentials', async () => {
 
-        await $('#customer_menu_top > li > a').click();              
+        await $(loginRegister).click();              
         await $(loginField).setValue('loginname');
         await $(passwordField).setValue('password');        
         await $(loginButton).click();       

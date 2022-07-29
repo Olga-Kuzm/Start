@@ -1,6 +1,6 @@
 
 describe('Shopping cart flow', function(){
-    const loginRegester = '#customernav a'
+    const loginRegister = '#customernav a'
     const loginField = '#loginFrm_loginname';
     const passwordField = '#loginFrm_password';
     const loginButton = '[title="Login"]';    
@@ -25,7 +25,7 @@ describe('Shopping cart flow', function(){
     before('login', async function(){
         await browser.maximizeWindow()
         await browser.url(`https://automationteststore.com/`);        
-        await $(loginRegester).click(); 
+        await $(loginRegister).click(); 
         await $(loginField).setValue('loginname');
         await $(passwordField).setValue('password');        
         await $(loginButton).click();
