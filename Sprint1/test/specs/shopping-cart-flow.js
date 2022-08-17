@@ -19,16 +19,17 @@ describe('Shopping cart flow', function(){
     const shoppingCart = '.contentpanel'
     const emptyCartText = 'Your shopping cart is empty!\nContinue'
    
-    
-
-    
+    async function login(login, password){
+        await $(loginRegister).click(); 
+        await $(loginField).setValue(login);
+        await $(passwordField).setValue(password);        
+        await $(loginButton).click();
+    }
     before('login', async function(){
         await browser.maximizeWindow()
-        await browser.url(`https://automationteststore.com/`);        
-        await $(loginRegister).click(); 
-        await $(loginField).setValue('loginname');
-        await $(passwordField).setValue('password');        
-        await $(loginButton).click();
+        await browser.url(`https://automationteststore.com/`); 
+        login('loginname', 'password')
+        await browser.pause(100)
 
     })
     context('Adding goods', function(){

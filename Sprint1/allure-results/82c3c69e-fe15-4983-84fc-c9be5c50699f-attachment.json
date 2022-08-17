@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "#categorymenu > nav > ul > li:nth-child(2) > div > ul:nth-child(1) > li:nth-child(1) > a"
-}
